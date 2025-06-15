@@ -1,6 +1,3 @@
-The "AtoI" problem, commonly found on platforms like LeetCode, refers to the task of converting a string to an integer.
-The problem title is often an abbreviation of "ASCII to Integer" or "Alphabetical to Integer."
-
 ## AtoI Problem: String to Integer (atoi)
 
 **Problem Description:**
