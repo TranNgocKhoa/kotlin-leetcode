@@ -61,6 +61,6 @@ class Solution {
 fun main() {
     val solution = Solution()
 
-//    println(solution.myAtoi("   -042"))
+    println(solution.myAtoi("   -042"))
     println(solution.myAtoi(" "))
 }
