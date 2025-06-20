@@ -2,61 +2,17 @@ package add_binary
 
 class Solution {
     fun addBinary(a: String, b: String): String {
-        var extra = '0'
-        val result = StringBuffer()
-        val shorter = if (a.length >= b.length) b else a
-        val longer = if (a.length >= b.length) a else b
-        shorter.forEachIndexed { index, c ->
-            if (shorter[shorter.length - index - 1] == '0') {
-                if (extra == '0') {
-                    result.append(longer[longer.length - index - 1])
-                } else {
-                    if (longer[longer.length - index - 1] == '1') {
-                        result.append('0')
-                        extra = '1'
-                    } else {
-                        result.append(extra)
-                        extra = '0'
-                    }
-                }
-            } else if (shorter[shorter.length - index - 1] == '1') {
-                if (extra == '0') {
-                    if (longer[longer.length - index - 1] == '1') {
-                        result.append('0')
-                        extra = '1'
-                    } else {
-                        result.append('1')
-                    }
-                } else {
-                    if (longer[longer.length - index - 1] == '1') {
-                        result.append('1')
-                    } else {
-                        result.append('0')
-                    }
-                }
-            }
-        }
+        var carry = 0
+        val result = StringBuilder()
+        var aIndex = a.length - 1
+        var bIndex = b.length - 1
+        while (carry != 0 || bIndex >= 0 || aIndex >= 0) {
+            val sum = (if (aIndex >= 0) a[aIndex--] - '0' else 0) +
+                    (if (bIndex >= 0) b[bIndex--] - '0' else 0) +
+                    carry
 
-        var count = shorter.length
-        while (count < longer.length) {
-            if (extra == '0') {
-                result.append(longer[longer.length - count - 1])
-                count++
-            } else {
-                if (longer[longer.length - count - 1] == '1') {
-                    result.append('0')
-                    extra = '1'
-                    count++
-                } else {
-                    result.append('1')
-                    extra = '0'
-                    count++
-                }
-            }
-        }
-
-        if (extra == '1') {
-            result.append('1')
+            result.append(sum % 2)
+            carry = sum / 2
         }
 
         return result.reverse().toString()
