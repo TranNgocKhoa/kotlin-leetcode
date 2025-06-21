@@ -1,3 +1,3 @@
-# Kotlin Leetcode
+# Kotlin LeetCode
 
-
+Practice Kotlin and LeetCode.

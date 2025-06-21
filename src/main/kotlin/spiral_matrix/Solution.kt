@@ -7,7 +7,7 @@ class Solution {
         var direction = 0
         var row = 0
         var col = 0
-        var result: ArrayList<Int> = ArrayList()
+        val result: ArrayList<Int> = ArrayList()
         while (count < matrix.size * matrix[0].size) {
             if (direction == 0) {
                 while (col < matrix[0].size && matrix[row][col] != -200) {
