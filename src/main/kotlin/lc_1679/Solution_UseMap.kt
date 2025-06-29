@@ -2,7 +2,7 @@ package lc_1679
 
 class Solution_UseMap {
     fun maxOperations(nums: IntArray, k: Int): Int {
-        val freqMap = mutableMapOf<Int, Int>()
+        val freqMap = HashMap<Int, Int>()
         var count = 0
 
         for (num in nums) {

@@ -6,19 +6,19 @@ class Solution {
 
         var left = 0
         var right = nums.size - 1
-
         var count = 0
+
         while (left < right) {
             val sum = nums[left] + nums[right]
 
-            if (sum < k) {
-                left++
-            } else if (sum > k) {
-                right--
-            } else {
-                count++
-                left++
-                right--
+            when {
+                sum < k -> left++
+                sum > k -> right--
+                else -> {
+                    count++
+                    left++
+                    right--
+                }
             }
         }
 
