@@ -20,6 +20,6 @@ class Solution_UseMap {
 }
 
 fun main() {
-    println(Solution().maxOperations(intArrayOf(1, 2, 3, 4), 5))
-    println(Solution().maxOperations(intArrayOf(3, 1, 3, 4, 3), 6))
+    println(Solution_UseMap().maxOperations(intArrayOf(1, 2, 3, 4), 5))
+    println(Solution_UseMap().maxOperations(intArrayOf(3, 1, 3, 4, 3), 6))
 }
