@@ -1,4 +1,4 @@
-package add_digits
+package lc_258
 
 class Solution {
     fun addDigits(num: Int): Int {

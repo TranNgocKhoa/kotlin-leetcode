@@ -1,6 +1,6 @@
-## Problem: Add Two Numbers
+# 2. Problem: Add Two Numbers
 
-### Problem Description
+## Description
 
 You are given two **non-negative numbers** represented as **linked lists**. Each **node** in the linked list contains a
 single **digit**. The digits are stored in **reverse order**, meaning the 1's digit is at the head of the list. Your

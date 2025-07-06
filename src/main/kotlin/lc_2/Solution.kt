@@ -1,4 +1,4 @@
-package add_two_numbers
+package lc_2
 
 import libs.ListNode
 
