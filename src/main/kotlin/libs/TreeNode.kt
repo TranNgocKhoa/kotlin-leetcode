@@ -1,11 +1,15 @@
 package libs
 
-import java.util.LinkedList
-import java.util.Queue
+import java.util.*
 
 class TreeNode(var `val`: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
+
+    override fun toString(): String {
+        return "$`val` -> ${left?.`val`}, ${right?.`val`}"
+
+    }
 }
 
 fun buildTreeFromArray(arr: Array<Int?>): TreeNode? {
